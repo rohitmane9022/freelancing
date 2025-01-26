@@ -1,4 +1,4 @@
-import PackageImage from "../Images/PackageImage.png";
+import packageImage from "../Images/packageImage.png";
 
 const AboutUs = () => {
   return (
@@ -28,7 +28,7 @@ const AboutUs = () => {
         </div>
         
         <img
-          src={PackageImage}
+          src={packageImage}
           alt=""
           className="md:w-full h-96 "
         />

@@ -1,5 +1,5 @@
 import HomeImage from "../Images/HomeImage.png";
-import PackageImage from "../Images/PackageImage.png";
+import packageImage from "../Images/packageImage.png";
 import explore1 from "../Images/exploreImages/explore1.png"
 import explore2 from "../Images/exploreImages/explore2.png"
 import explore3 from "../Images/exploreImages/explore3.png"
@@ -36,7 +36,7 @@ const Backdrop = () => {
                 </p>
               </div>
               <div className=" hidden md:flex md:w-[90%] gap-10 mx-auto">
-                <img src={PackageImage} alt="" className="hidden md:block md:w-auto w-10 " />
+                <img src={packageImage} alt="" className="hidden md:block md:w-auto w-10 " />
                 <div className="flex-col px-7 md:w-auto py-5 rounded-xl lg:text-lg text-white font-baskerville bg-bgSecond">
                 <p>Transform your special moments into timeless treasures with FotoRoo’s premium photo booth packages. Enjoy unlimited photos and videos throughout your event, with seamless setup and pack-down handled by our dedicated team. From elegant backdrops to trendy props, we bring everything you need to create stunning, high-quality images that your guests will cherish forever. Our state-of-the-art booths, including DSLR, Mirror, and 360 options, are fully customizable to match your event’s theme, ensuring a truly personalized experience. Serving Sydney, Blue Mountains, and Wollongong, FotoRoo takes pride in delivering a seamless, stress-free service that makes your event unforgettable. See why we’re the trusted choice for weddings, parties, and corporate events.</p>
                 <p className="mt-2">*We offer free of charge travel within Sydney. Bookings outside Sydney will incur a travel charge*</p>
