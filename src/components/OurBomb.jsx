@@ -3,7 +3,7 @@ import Ourbomb from "../Images/OurBomb.png";
 
 const OurBomb = () => {
   return (
-    <section className="flex lg:justify-between lg:flex-row flex-col lg:items-center lg:px-24 w-full my-10">
+    <section className="flex lg:justify-between md:gap-20 lg:flex-row flex-col lg:items-center lg:px-24 w-full my-10">
       <div className="text-center md:text-start" >
         <h1 className="md:text-[55px] md:uppercase font-pinyon text-5xl md:font-rig-solid">Our Bomb Fotoroo</h1>
         <p className="border-b border-black md:w-[640px] my-4"/>
@@ -18,7 +18,7 @@ const OurBomb = () => {
         </div>
         {/* <button className="text-bgPrimary bg-textCol hover:text-textCol hover:bg-bgPrimary text-base px-8 rounded-sm py-2 border-4 font-medium border-transparent hover:border-textCol duration-300">Learn More</button> */}
       </div>
-      <div className="lg:w-[1900px] md:w-full mx-auto mt-10 md:my-0">
+      <div className="lg:w-[1900px] mx-auto mt-10 md:my-0">
         <img src={Ourbomb} alt="Bomb Image" />
       </div>
     </section>
