@@ -119,18 +119,19 @@
 
 .swiper-slide-active {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1.1);
 }
 
 .swiper-slide-prev,
 .swiper-slide-next {
-  opacity: 0.6;
-  transform: scale(0.9);
+  opacity: 0.8;  
+  transform: scale(0.9); 
 }
 
+
 .swiper-pagination-bullet {
-  width: 8px !important;
-  height: 8px !important;
+  width: 10px !important;
+  height: 10px !important;
   background: #D1D5DB !important;
   opacity: 1 !important;
 }
@@ -138,6 +139,7 @@
 .swiper-pagination-bullet-active {
   background: #9CA3AF !important;
 }
+
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -148,6 +150,7 @@
 .swiper-button-next:after {
   display: none;
 }
+
 
 @media (max-width: 640px) {
   .swiper-button-prev,

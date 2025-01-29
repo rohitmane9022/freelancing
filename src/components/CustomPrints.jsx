@@ -12,7 +12,7 @@ import  ImageSlider from "./ImageSlider";
 
 
 const CustomPrints = () => {
-  const images = [ image1, image2, image3, ];
+  const images = [ image1, image2, image3,image1, image2, image3, image1, image2, image3,image1, image2, image3, ];
 
   return (
    <section className="my-10">

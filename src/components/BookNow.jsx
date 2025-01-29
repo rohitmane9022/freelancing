@@ -1,7 +1,12 @@
 import  { useState } from 'react';
 import BookImage from "../Images/BookImage.png";
+import { useLocation, useParams, useSearchParams } from 'react-router';
 
 const BookNow = () => {
+  const location = useLocation();
+  console.log(location)
+
+  
   const [formData, setFormData] = useState({
     name: '',
     country: '',
@@ -50,15 +55,15 @@ const BookNow = () => {
   };
 
   return (
-    <section id='/contactus' className="flex lg:flex-row px-5 md:gap-10 flex-col my-10 md:mx-auto md:w-[95%] md:px-10">
+    <section className="flex lg:flex-row px-5 md:gap-10 flex-col my-10 md:mx-auto md:w-[95%] md:px-10">
       <div className="md:w-[50%]">
         <img src={BookImage} alt="" className="md:block hidden" />
       </div>
-      <div className="md:w-[50%]">
-        <h1 className="uppercase lg:text-5xl text-5xl text-center md:text-start font-rig-solid">Book Now</h1>
+      <div className="">
+        <h1 className={`uppercase lg:text-5xl text-5xl text-center md:text-start font-rig-solid ${location.pathname==="/enquire"?"mt-5":""}`}>{location.pathname==="/enquire"?"Please Fill This Form...":""}</h1>
 
         <form onSubmit={handleSubmit}>
-          <div className="flex md:flex-row flex-col gap-3 my-3">
+          <div className={`flex md:flex-row flex-col gap-3 my-3 ${location.pathname==="/enquire"?"mt-5":""}`}>
             <input
               type="text"
               name="name"

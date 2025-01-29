@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import PackageDetails from "./components/PackageDetails/PackageDetails";
 import Backdrop from "./components/Backdrop";
 import AboutUs from "./components/AboutUs";
+import Enquire from "./components/Enquire";
 
 
 const Home = lazy(() => import("./components/Home"));
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/packages/:id" element={<PackageDetails/>}/>
           <Route path="/backdrop" element={<Backdrop />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/enquire" element={<Enquire />} />
         </Route>
       </Routes>
     </Suspense>

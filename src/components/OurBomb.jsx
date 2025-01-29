@@ -16,9 +16,9 @@ const OurBomb = () => {
           <p className="my-4">With a passionate team of professionals and all-inclusive packages, we promise a seamless, stress-free experience tailored just for you.</p>
           <p className="my-4">From elegant mirror booths to versatile <span className="font-semibold">DSLR</span>  booths and the immersive 360 booths, FotoRoo brings state-of-the-art technology to your event, delivering high-definition imagery and an array of interactive features that wow your guests.</p>
         </div>
-        <button className="text-bgPrimary bg-textCol hover:text-textCol hover:bg-bgPrimary text-base px-8 rounded-sm py-2 border-4 font-medium border-transparent hover:border-textCol duration-300">Learn More</button>
+        {/* <button className="text-bgPrimary bg-textCol hover:text-textCol hover:bg-bgPrimary text-base px-8 rounded-sm py-2 border-4 font-medium border-transparent hover:border-textCol duration-300">Learn More</button> */}
       </div>
-      <div className="lg:w-[1900px] w-full mt-10 md:my-0">
+      <div className="lg:w-[1900px] md:w-full mx-auto mt-10 md:my-0">
         <img src={Ourbomb} alt="Bomb Image" />
       </div>
     </section>

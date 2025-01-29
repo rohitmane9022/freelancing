@@ -10,7 +10,7 @@ const ExploreOurBooths = () => {
       </div>
       <div className="font-baskerville">
       <div className="flex lg:flex-row flex-col lg:justify-evenly">
-        <img src={explore} alt="explore image" className="w-[456px]" />
+        <img src={explore} alt="explore image" className="md:w-[456px]" />
         <div className="lg:w-[26rem] w-full mr-10">
             <h2 className="lg:pb-7 py-5 text-2xl">Lorem Ipsum Dolor</h2>
         <p className="text-lg ">
@@ -28,10 +28,10 @@ const ExploreOurBooths = () => {
         </p>
         <button className="btn">Learn More</button>
         </div>
-        <img src={explore} alt="explore image" className="w-[456px]" />
+        <img src={explore} alt="explore image" className="md:w-[456px]" />
       </div>
       <div className="flex lg:flex-row flex-col lg:justify-evenly lg:mt-10">
-        <img src={explore} alt="explore image" className="w-[456px]" />
+        <img src={explore} alt="explore image" className="md:w-[456px]" />
         <div className="lg:w-[26rem] w-full lg:mr-10">
             <h2 className="lg:pb-7 py-5 text-2xl">Lorem Ipsum Dolor</h2>
         <p className="text-lg ">
