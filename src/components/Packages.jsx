@@ -43,7 +43,7 @@ const Packages = () => {
         
       </div>
       <div className="my-10">
-        <h1 className="text-center my-5 text-4xl md:text-6xl font-rig-solid">Explore Our Booths</h1>
+        <h1 className="text-center my-14 text-4xl md:text-6xl font-rig-solid">Explore Our Booths</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         {booths.map((booth) => (
           <div

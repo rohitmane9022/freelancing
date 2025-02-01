@@ -28,7 +28,7 @@ const Backdrop = () => {
         <div className="relative"> 
                 <img
                   src={HomeImage}
-                  className="md:w-[1500px]  my-5 md:h-[400px] h-[350px] flex justify-center overflow-hidden z-0"
+                  className="md:w-[1500px] hover:scale-110 transition-transform duration-300  my-5 md:h-[400px] h-[350px] flex justify-center overflow-hidden z-0"
                   alt="Home Image"
                 />
                 <p className="absolute inset-0 flex items-center md:text-8xl font-baskerville font- md:font-pinyon justify-center  text-white text-3xl ">
@@ -56,7 +56,7 @@ const Backdrop = () => {
               <img
                 src={booth.image}
                 alt={booth.name}
-                className="w-auto md:h-96 object-cover  rounded-lg overflow-hidden "
+                className="w-auto md:h-96 object-cover hover:scale-110 transition-transform duration-300  rounded-lg overflow-hidden "
               />
             </div>
             <div className="p-4">

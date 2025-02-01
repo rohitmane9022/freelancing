@@ -104,7 +104,8 @@ const PackageDetails = () => {
                       }`}>
                         <div className="md:w-2/5 mx-auto text-center md:text-start my-9 md:my-0">
                         <h2 className="text-xl my-4 md:text-4xl font-rig-solid">{item.title}</h2>
-                        <p className="font-baskerville font-medium md:text-lg leading-5 text-textCol md:w-4/5">{item.paragraph}</p></div>
+                        <p className="font-courgette font-medium md:text-lg leading-5 text-textCol md:w-4/5">{item.paragraph}</p>
+                        </div>
                         <div className="md:w-2/4 ">
                         <img src={item.imageURL} alt={item.title} className="w-full object-cover" /></div>
                     </div>
