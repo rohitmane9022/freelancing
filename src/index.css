@@ -114,6 +114,19 @@
   font-weight: 400;
   font-style: italic;
 }
+@font-face {
+  font-family: 'Playwrite IN';
+  src: url('https://fonts.gstatic.com/s/playwritein/v1/variant-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Courgette';
+  src: url('https://fonts.gstatic.com/s/courgette/v14/wEO_EBrAnc9BLjLQAXp-dw.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
 .swiper-slide {
   transition: all 0.3s ease;
   opacity: 0.4;

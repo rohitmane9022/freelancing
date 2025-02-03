@@ -115,8 +115,14 @@ export default {
   				'Rig Solid',
   				'sans-serif'
   			],
-			  Playwrite:["Playwrite IN", "serif"],
-			  courgette:["Courgette", "serif"]
+			  'playwrite': [
+          'Playwrite IN', 
+          'serif'
+        ],
+        'courgette': [
+          'Courgette', 
+          'serif'
+        ]
   		}
   	}
   },

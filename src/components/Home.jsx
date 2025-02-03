@@ -1,6 +1,5 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import HomeImage from "../Images/HomeImage.png";
+
+import videoHome from "../Images/videoHome.mp4";
 import CaptureMemories from "./CaptureMemories";
 import CustomPrints from "./CustomPrints";
 import EventCompleted from "./EventCompleted";
@@ -11,41 +10,19 @@ import OurService from "./OurService";
 import Testimonials from "./Testimonials";
 
 const Home = () => {
-  const controls = useAnimation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      controls.start({ y: -scrollY * 0.5 }); // Adjust scroll speed here
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [controls]);
 
   return (
     <section className="flex flex-col">
-      <div className="home flex flex-col items-center">
-        <div className="flex flex-col items-center text-textCol">
-          <motion.h1
-            className="font-pinyon lg:text-[135px] text-7xl mt-1"
-            animate={controls}
-            initial={{ y: 0 }}
-          >
-            Welcome To
-          </motion.h1>
-          <br />
-          <motion.p
-            className="font-baskerville lg:text-[80px] text-5xl font-extralight -mt-10 ml-10"
-            animate={controls}
-            initial={{ y: 0 }}
-          >
-            FOTORO
-          </motion.p>
-        </div>
-        <div className="my-10 flex justify-center">
-          <img src={HomeImage} className="md:w-[1500px]" alt="Home Image" />
+      <div className="home" >
+        
+        <div className="my-10 flex justify-center rounded-lg overflow-hidden">
+         <video src={videoHome} 
+            className="md:w-[1500px] sm:h-[600px]  object-fill"
+        
+            autoPlay 
+            loop 
+            muted
+            aria-label="Promotional video"/>
         </div>
       </div>
       <OurService />

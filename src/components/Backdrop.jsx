@@ -32,7 +32,7 @@ const Backdrop = () => {
                   alt="Home Image"
                 />
                 <p className="absolute inset-0 flex items-center md:text-8xl font-baskerville font- md:font-pinyon justify-center  text-white text-3xl ">
-                  Our <span className="font-baskerville uppercase md:pl-3 pl-1 md:text-7xl">Packages</span>
+                  Our <span className="font-baskerville uppercase md:pl-3 pl-1 md:text-7xl">Backdrop</span>
                 </p>
               </div>
               <div className=" hidden md:flex md:w-[90%] gap-10 mx-auto">
@@ -66,7 +66,7 @@ const Backdrop = () => {
                 className="btn block"
             
               >
-                Learn More
+                Packages
               </button>
             </div>
           </div>

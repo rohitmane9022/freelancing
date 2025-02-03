@@ -60,7 +60,7 @@ const BookNow = () => {
         <img src={BookImage} alt="" className="md:block hidden" />
       </div>
       <div className="">
-        <h1 className={`uppercase lg:text-5xl text-5xl text-center md:text-start font-rig-solid ${location.pathname==="/enquire"?"mt-5":""}`}>{location.pathname==="/enquire"?"Please Fill This Form...":""}</h1>
+        <h1 className={`uppercase lg:text-5xl text-5xl text-center md:text-start font-rig-solid ${location.pathname==="/enquire"?"mt-5":""}`}>{location.pathname==="/enquire"?"Please Fill This Form":"Book Now"}</h1>
 
         <form onSubmit={handleSubmit}>
           <div className={`flex md:flex-row flex-col gap-3 my-3 ${location.pathname==="/enquire"?"mt-5":""}`}>
