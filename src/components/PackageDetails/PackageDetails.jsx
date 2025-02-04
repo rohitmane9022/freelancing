@@ -3,6 +3,7 @@ import HomeImage from "../../Images/HomeImage.png";
 import packagedetail1 from "../../Images/packagedetail1.png";
 import packagedetail2 from "../../Images/packagedetail2.png";
 import packagedetail3 from "../../Images/packagedetail3.png";
+import { useEffect } from "react";
 
 
 const items = [
@@ -82,6 +83,12 @@ const PackageDetails = () => {
     console.log(id)
   const filterValue= items.filter(item=> item.id===Number(id))
   console.log(filterValue)
+
+ 
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="PackageDetails">
             {filterValue.map((packItem=>(
@@ -99,7 +106,7 @@ const PackageDetails = () => {
                   <div>
                   {packItem.details.map(((item,index)=>(
                     < >
-                    <div key={item.paragraph} className={`flex flex-col justify-center md:flex-row ${
+                    <div key={item.paragraph} className={`flex flex-col justify-center sm:px-24 md:flex-row ${
                         index % 2 === 0 ? "md:flex-row-reverse md:items-center flex-col-reverse" : "md:flex-row md:items-center flex-col-reverse" 
                       }`}>
                         <div className="md:w-2/5 mx-auto text-center md:text-start my-9 md:my-0">

@@ -1,12 +1,13 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import BookImage from "../Images/BookImage.png";
-import { useLocation, useParams, useSearchParams } from 'react-router';
+import { useLocation } from 'react-router';
+
+const countries = ["India", "USA", "UK", "Australia"];
+const services = ["Web Development", "App Development", "SEO Optimization", "Consultation"];
 
 const BookNow = () => {
   const location = useLocation();
-  console.log(location)
 
-  
   const [formData, setFormData] = useState({
     name: '',
     country: '',
@@ -35,15 +36,7 @@ const BookNow = () => {
 
       if (response.ok) {
         alert("Message sent successfully!");
-        
-        setFormData({
-          name: '',
-          country: '',
-          phone: '',
-          service: '',
-          email: '',
-          message: '',
-        });
+        setFormData({ name: '', country: '', phone: '', service: '', email: '', message: '' });
       } else {
         console.error('Error:', response.status);
         alert('Failed to send message. Please try again later.');
@@ -57,60 +50,70 @@ const BookNow = () => {
   return (
     <section className="flex lg:flex-row px-5 md:gap-10 flex-col my-10 md:mx-auto md:w-[95%] md:px-10">
       <div className="md:w-[50%]">
-        <img src={BookImage} alt="" className="md:block hidden" />
+        <img src={BookImage} alt="Book Now" className="md:block hidden" />
       </div>
-      <div className="">
-        <h1 className={`uppercase lg:text-5xl text-5xl text-center md:text-start font-rig-solid ${location.pathname==="/enquire"?"mt-5":""}`}>{location.pathname==="/enquire"?"Please Fill This Form":"Book Now"}</h1>
+
+      <div>
+        <h1 className={`uppercase lg:text-5xl text-5xl text-center md:text-start font-rig-solid ${location.pathname === "/enquire" ? "mt-5" : ""}`}>
+          {location.pathname === "/enquire" ? "Please Fill This Form" : "Book Now"}
+        </h1>
 
         <form onSubmit={handleSubmit}>
-          <div className={`flex md:flex-row flex-col gap-3 my-3 ${location.pathname==="/enquire"?"mt-5":""}`}>
+          <div className={`flex md:flex-row flex-col gap-3 my-3 ${location.pathname === "/enquire" ? "mt-5" : ""}`}>
             <input
               type="text"
               name="name"
-              id="name"
               placeholder="Name"
               value={formData.name}
               onChange={handleChange}
               className="px-5 w-full py-3 border rounded-md border-gray-500"
             />
-            <input
-              type="text"
+
+            <select
               name="country"
-              id="country"
-              placeholder="Country"
               value={formData.country}
               onChange={handleChange}
               className="px-5 w-full py-3 border rounded-md border-gray-500"
-            />
+            >
+              <option value="">Select Country</option>
+              {countries.map((country) => (
+                <option key={country} value={country}>{country}</option>
+              ))}
+            </select>
           </div>
+
           <div className="flex md:flex-row flex-col gap-3 my-3">
             <input
               type="number"
               name="phone"
-              id="phone"
               placeholder="Phone"
               value={formData.phone}
               onChange={handleChange}
               className="px-5 w-full py-3 border rounded-md border-gray-500"
             />
-            <input
-              type="text"
+
+            <select
               name="service"
-              id="service"
-              placeholder="Service"
               value={formData.service}
               onChange={handleChange}
               className="px-5 w-full py-3 border rounded-md border-gray-500"
-            />
+            >
+              <option value="">Select Service</option>
+              {services.map((service) => (
+                <option key={service} value={service}>{service}</option>
+              ))}
+            </select>
           </div>
+
           <input
             type="email"
             name="email"
-            placeholder="Email I'd"
+            placeholder="Email ID"
             value={formData.email}
             onChange={handleChange}
             className="px-5 w-full py-3 border rounded-md border-gray-500"
           />
+
           <textarea
             name="message"
             placeholder="Tell us more..."
@@ -118,6 +121,7 @@ const BookNow = () => {
             onChange={handleChange}
             className="px-5 my-3 w-full py-5 md:h-40 border rounded-md border-gray-500"
           ></textarea>
+
           <button className="text-white rounded-md bg-textCol text-center px-5 w-full py-3">
             Send Message
           </button>
