@@ -29,7 +29,7 @@ const Backdrop = () => {
       <div className="relative">
         <img
           src={Medium1}
-          className="md:w-[1500px]  hover:scale-110 transition-transform duration-300  my-5 md:h-[400px] h-[350px] flex justify-center  z-0"
+          className="md:w-[1500px] rounded-lg  hover:scale-110 transition-transform duration-300  my-5 md:h-[400px] h-[350px] flex justify-center  z-0"
           alt="Home Image"
         />
         <p className="absolute inset-0 flex items-center md:text-8xl font-baskerville font- md:font-pinyon justify-center  text-white text-3xl ">
@@ -50,7 +50,7 @@ const Backdrop = () => {
             At FotoRoo, we offer a stunning range of backdrops to elevate your
             photo booth experience. From elegant designs to vibrant themes, our
             backdrops are carefully curated to complement any event style.
-            Whether you're planning a wedding, party, or corporate event, our
+            Whether you &apos;re planning a wedding, party, or corporate event, our
             versatile options ensure the perfect setting for unforgettable
             photos. Let us help you create a picture-perfect backdrop for your
             special moments!
