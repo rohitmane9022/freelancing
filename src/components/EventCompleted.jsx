@@ -1,24 +1,25 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-import image1 from "../Images/image1.png";
-import image2 from "../Images/image2.png";
-import image3 from "../Images/image3.png";
+import Australian1 from "../Images/eventImage/Australian1.jpg"
+import Australian2 from "../Images/eventImage/Australian2.jpg"
+import Birthday from "../Images/eventImage/Birthday.jpg"
+import DandD from "../Images/eventImage/DandD.jpg"
+import IheartUni from "../Images/eventImage/IheartUni.jpg"
+import IheartUni1 from "../Images/eventImage/IheartUni1.jpg"
+import Lux from "../Images/eventImage/Lux.png"
+import Uttarakhandi from "../Images/eventImage/Uttarakhandi.jpg"
 
 const EventCompleted = () => {
   const images = [
-    image1,
-    image2,
-    image3,
-    image1,
-    image2,
-    image3,
-    image1,
-    image2,
-    image3,
-    image1,
-    image2,
-    image3,
+    Australian1,
+    Australian2,
+    Birthday,
+    DandD,
+    IheartUni,
+    IheartUni1,
+    Lux,
+    Uttarakhandi
   ];
 
   const sectionRef = React.useRef(null);

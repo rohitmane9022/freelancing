@@ -64,7 +64,7 @@ const Packages = () => {
                 className="btn block"
                 onClick={() => handleLearnMore(booth.id)}
               >
-                Learn More
+                Enquire Now 
               </button>
             </div>
           </div>
