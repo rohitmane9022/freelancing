@@ -14,9 +14,9 @@ const ExploreOurBooths = () => {
       <div className="flex lg:flex-row flex-col lg:justify-evenly">
         <img src={explore} alt="explore image" className="md:w-[456px]" />
         <div className="lg:w-[26rem] w-full mr-10">
-            <h2 className="lg:pb-7 py-5 text-2xl">Your Reflection, Redefined!</h2>
+            <h2 className="lg:pb-7 py-5 text-2xl">Mirror Boot</h2>
         <p className="text-lg ">
-        A statement piece, a conversation starter, and a photo booth like no other. 
+        Your Reflection, Redefined! A statement piece, a conversation starter, and a photo booth like no other. 
 Snap, sign, and shine with custom overlays and instant prints. Step up, strike a pose, and watch the magic unfold! 
 
         </p>

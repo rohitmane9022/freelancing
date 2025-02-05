@@ -60,7 +60,7 @@ const BookNow = () => {
 
         <form onSubmit={handleSubmit}>
           <div className={`flex md:flex-row flex-col gap-3 my-3 ${location.pathname === "/enquire" ? "mt-5" : ""}`}>
-            <input
+            <input required
               type="text"
               name="name"
               placeholder="Name"
@@ -83,7 +83,7 @@ const BookNow = () => {
           </div>
 
           <div className="flex md:flex-row flex-col gap-3 my-3">
-            <input
+            <input required
               type="number"
               name="phone"
               placeholder="Phone"
@@ -100,12 +100,12 @@ const BookNow = () => {
             >
               <option value="">Select Service</option>
               {services.map((service) => (
-                <option key={service} value={service}>{service}</option>
+                <option required key={service} value={service}>{service}</option>
               ))}
             </select>
           </div>
 
-          <input
+          <input required
             type="email"
             name="email"
             placeholder="Email ID"
