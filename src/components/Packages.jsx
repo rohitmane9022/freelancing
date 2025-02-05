@@ -1,4 +1,4 @@
-import  Medium2 from "../Images/Medium2.jpg";
+import  medium2 from "../Images/medium2.jpg";
 import packageImage from "../Images/packageImage.png";
 import explorepackage from "../Images/explorepackage.png";
 import { useNavigate } from "react-router-dom";
@@ -26,7 +26,7 @@ const Packages = () => {
     <section className="mx-auto w-full">
       <div className="relative"> 
         <img
-          src={Medium2}
+          src={medium2}
           className="md:w-[1500px] rounded-lg  my-5 md:h-[400px] h-[350px] flex justify-center overflow-hidden z-0"
           alt="Home Image"
         />
