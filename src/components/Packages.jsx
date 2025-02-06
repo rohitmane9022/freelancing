@@ -1,4 +1,4 @@
-import  medium2 from "../Images/medium2.jpg";
+import  medium2 from "../Images/medium2.png";
 import packageImage from "../Images/packageImage.png";
 import explorepackage from "../Images/explorepackage.png";
 import { useNavigate } from "react-router-dom";

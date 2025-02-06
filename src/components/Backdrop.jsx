@@ -1,4 +1,4 @@
-import  Medium1 from "../Images/Medium1.jpg";
+import  Medium1 from "../Images/Medium1.png";
 import packageImage from "../Images/packageImage.png";
 import explore1 from "../Images/exploreImages/explore1.png";
 import explore2 from "../Images/exploreImages/explore2.png";
