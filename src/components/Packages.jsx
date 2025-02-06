@@ -27,7 +27,7 @@ const Packages = () => {
       <div className="relative"> 
         <img
           src={medium2}
-          className="md:w-[1500px] rounded-lg  my-5 md:h-[400px] h-[350px] flex justify-center overflow-hidden z-0"
+          className="md:w-[1500px] rounded-lg opacity-80  my-5 md:h-[400px] h-[350px] flex justify-center overflow-hidden z-0"
           alt="Home Image"
         />
         <p className="absolute inset-0 flex items-center md:text-8xl font-baskerville font- md:font-pinyon justify-center  text-white text-3xl ">
