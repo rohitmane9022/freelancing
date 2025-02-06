@@ -49,7 +49,7 @@ const EventCompleted = () => {
               key={`img1-${index}`}
               src={src}
               alt={`Scrolling image ${index + 1}`}
-              className="lg:h-72 md:h-64 h-36 object-cover"
+              className="lg:h-72 md:h-64 h-36 object-cover rounded-lg"
             />
           ))}
 
