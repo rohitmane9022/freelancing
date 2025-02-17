@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import explore from "../Images/explore.png"
-import ExploreBoots3 from "../video/ExploreBoots3.mp4"
+import ExploreBoots3 from "../Images/ExploreBoots3.mp4"
 
 
 
@@ -39,7 +39,7 @@ Snap, sign, and shine with custom overlays and instant prints. Step up, strike a
       <div className="flex lg:flex-row flex-col lg:justify-evenly lg:mt-10">
         <div className="md:h-[600px] object-contain overflow-hidden">
       <video 
-  src="/video/ExploreBoots3.mp4"
+  src={ExploreBoots3} 
   className="md:w-[456px] " 
   autoPlay 
   muted 
