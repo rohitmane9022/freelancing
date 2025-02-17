@@ -10,27 +10,38 @@ import {
 const Faq = () => {
   const faqs = [
     {
-      "question": "What types of photobooths do you offer?",
-      "answer": "We offer a variety of photobooths, including Mirror Booths, DSLR Booths, and 360 Booths, each tailored to suit different event styles and preferences."
+      "question": "What types of photo booths do you offer?",
+      "answer": "We offer a variety of photo booths, including Mirror Booths, DSLR Booths, 360 Booths, and our new Magazine Booth, each tailored to suit different event styles and preferences."
+    },
+    {
+      "question": "What is the Magazine Booth?",
+      "answer": "The Magazine Booth allows guests to create stunning magazine-style photo layouts, complete with customizable covers and templates. It’s perfect for adding a chic touch to your event!"
     },
     {
       "question": "Can the photobooth be set up outdoors?",
-      "answer": "An accordion menu is a vertically stacked list of headers that can be clicked to reveal or hide content associated with them. It is one of many ways you can expose content to users in a progressive manner."
+      "answer": "Yes, but we require a flat, stable surface and adequate weather protection to ensure everything runs smoothly."
     },
     {
       "question": "Can I personalize the photo prints for my event?",
-      "answer": "An accordion menu is a vertically stacked list of headers that can be clicked to reveal or hide content associated with them. It is one of many ways you can expose content to users in a progressive manner."
+      "answer": "Absolutely! We can create custom overlays and magazine covers to match your event theme at no additional cost, with options like 2x6\" photo strips or 4x6\" prints."
     },
     {
       "question": "Do you provide custom backdrops?",
-      "answer": "An accordion menu is a vertically stacked list of headers that can be clicked to reveal or hide content associated with them. It is one of many ways you can expose content to users in a progressive manner."
+      "answer": "Yes, we offer a range of 7x7 ft and 8x8 ft backdrops, and we can create personalized backdrops upon request."
     },
     {
-      "question": "Can I add custom music or animations to the DSLR, Mirror or 360 Booth?",
-      "answer": "An accordion menu is a vertically stacked list of headers that can be clicked to reveal or hide content associated with them. It is one of many ways you can expose content to users in a progressive manner."
+      "question": "How much space is required for the photobooth?",
+      "answer": "Depending on the type of booth, we need approximately 2.5x3 meters for setup and enough space for guests to comfortably use the booth."
+    },
+    {
+      "question": "Do you provide an attendant during the event?",
+      "answer": "Yes, all our packages include a professional attendant to assist your guests and ensure everything runs smoothly."
+    },
+    {
+      "question": "Is there a limit on the number of photos taken during the rental period?",
+      "answer": "No, there’s no limit! Guests can take as many photos as they like during the rental period."
     }
-  ]
-
+  ];
   return (
     <section className="md:w-11/12 mx-auto">
         <h1 className="font-pinyon text-4xl text-center my-5 md:mb-10 md:text-6xl">FAQs</h1>

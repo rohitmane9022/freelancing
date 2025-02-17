@@ -1,19 +1,21 @@
 import { useState } from 'react';
 import BookImage from "../Images/BookImage.png";
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
+import toast, { Toaster } from 'react-hot-toast';
 
-const countries = ["India", "USA", "UK", "Australia"];
-const services = ["Web Development", "App Development", "SEO Optimization", "Consultation"];
+const booths = ["Mirror Booth", "360 Booth", "DSLR Booth", "Magazine Booth"];
 
 const BookNow = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: '',
-    country: '',
-    phone: '',
-    service: '',
     email: '',
+    phone: '',
+    eventDate: '',
+    eventLocation: '',
+    booth: '',
     message: '',
   });
 
@@ -35,32 +37,45 @@ const BookNow = () => {
       });
 
       if (response.ok) {
-        alert("Message sent successfully!");
-        setFormData({ name: '', country: '', phone: '', service: '', email: '', message: '' });
+        toast.success("Message sent successfully!");
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          eventDate: '',
+          eventLocation: '',
+          booth: '',
+          message: '',
+        });
+        setTimeout(() => navigate("/"), 1500); 
       } else {
         console.error('Error:', response.status);
-        alert('Failed to send message. Please try again later.');
+        toast.error('Failed to send message. Please try again later.');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('An error occurred while sending the message.');
+      toast.error('An error occurred while sending the message.');
     }
   };
 
   return (
     <section className="flex lg:flex-row px-5 md:gap-10 flex-col my-10 md:mx-auto md:w-[95%] md:px-10">
+      {/* Toast notifications */}
+      <Toaster position="top-center" reverseOrder={false} />
+
       <div className="md:w-[50%]">
         <img src={BookImage} alt="Book Now" className="md:block hidden" />
       </div>
 
-      <div>
+      <div className="md:w-[50%]">
         <h1 className={`uppercase lg:text-5xl text-5xl text-center md:text-start font-rig-solid ${location.pathname === "/enquire" ? "mt-5" : ""}`}>
           {location.pathname === "/enquire" ? "Please Fill This Form" : "Book Now"}
         </h1>
 
         <form onSubmit={handleSubmit}>
-          <div className={`flex md:flex-row flex-col gap-3 my-3 ${location.pathname === "/enquire" ? "mt-5" : ""}`}>
-            <input required
+          <div className="flex md:flex-row flex-col gap-3 my-1">
+            <input
+              required
               type="text"
               name="name"
               placeholder="Name"
@@ -68,62 +83,71 @@ const BookNow = () => {
               onChange={handleChange}
               className="px-5 w-full py-3 border rounded-md border-gray-500"
             />
-
-            <select
-              name="country"
-              value={formData.country}
+            <input
+              required
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
               onChange={handleChange}
               className="px-5 w-full py-3 border rounded-md border-gray-500"
-            >
-              <option value="">Select Country</option>
-              {countries.map((country) => (
-                <option key={country} value={country}>{country}</option>
-              ))}
-            </select>
+            />
           </div>
 
           <div className="flex md:flex-row flex-col gap-3 my-3">
-            <input required
+            <input
+              required
               type="number"
               name="phone"
-              placeholder="Phone"
+              placeholder="Phone Number"
               value={formData.phone}
+              onChange={handleChange}
+              className="px-5 w-full py-3 border rounded-md border-gray-500"
+            />
+            <input
+              required
+              type="date"
+              name="eventDate"
+              placeholder="Event Date"
+              value={formData.eventDate}
+              onChange={handleChange}
+              className="px-5 w-full py-3 border rounded-md border-gray-500"
+            />
+          </div>
+          <div className="flex md:flex-row flex-col gap-3 my-3">
+            <input
+              required
+              type="text"
+              name="eventLocation"
+              placeholder="Event Location"
+              value={formData.eventLocation}
               onChange={handleChange}
               className="px-5 w-full py-3 border rounded-md border-gray-500"
             />
 
             <select
-              name="service"
-              value={formData.service}
+              required
+              name="booth"
+              value={formData.booth}
               onChange={handleChange}
-              className="px-5 w-full py-3 border rounded-md border-gray-500"
+              className="px-5 w-full py-3 border rounded-md border-gray-500 my-3"
             >
-              <option value="">Select Service</option>
-              {services.map((service) => (
-                <option required key={service} value={service}>{service}</option>
+              <option value="">Select Booth</option>
+              {booths.map((booth) => (
+                <option key={booth} value={booth}>{booth}</option>
               ))}
             </select>
           </div>
-
-          <input required
-            type="email"
-            name="email"
-            placeholder="Email ID"
-            value={formData.email}
-            onChange={handleChange}
-            className="px-5 w-full py-3 border rounded-md border-gray-500"
-          />
-
           <textarea
             name="message"
-            placeholder="Tell us more..."
+            placeholder="Message (Optional)"
             value={formData.message}
             onChange={handleChange}
             className="px-5 my-3 w-full py-5 md:h-40 border rounded-md border-gray-500"
           ></textarea>
 
           <button className="text-white rounded-md bg-textCol text-center px-5 w-full py-3">
-            Send Message
+            Get a Quote
           </button>
         </form>
       </div>

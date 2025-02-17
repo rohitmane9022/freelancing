@@ -1,28 +1,36 @@
 import  Medium1 from "../Images/Medium1.png";
 import packageImage from "../Images/packageImage.png";
-import explore1 from "../Images/exploreImages/explore1.png";
-import explore2 from "../Images/exploreImages/explore2.png";
-import explore3 from "../Images/exploreImages/explore3.png";
+import Blue from "../Images/backdrops/Blue.png";
+import Golden1 from "../Images/backdrops/Golden1.png";
+import Golden2 from "../Images/backdrops/Golden2.png";
 import Golden from "../Images/backdrops/Golden.png";
 import Golden4 from "../Images/backdrops/Golden4.png";
 import Golden5 from "../Images/backdrops/Golden5.png";
 import Rose from "../Images/backdrops/Rose.png";
 import Silver from "../Images/backdrops/Silver.png";
 import Symphony from "../Images/backdrops/Symphony.png";
+import white from "../Images/backdrops/white.png";
+import snow from "../Images/backdrops/snow.png";
+import Royal from "../Images/backdrops/Royal.png";
+import pink from "../Images/backdrops/pink.png";
 import { useNavigate } from "react-router";
 
 const Backdrop = () => {
   const navigate = useNavigate();
   const Backdrops = [
-    { id: 1, name: "Mirror Booth", price: "8x8ft", image: explore1 },
-    { id: 2, name: "Mirror Booth", price: "8x8ft", image: explore2 },
-    { id: 3, name: "Mirror Booths", price: "8x8ft", image: explore3 },
-    { id: 4, name: "Mirror Booths", price: "8x8ft", image: Golden },
+    { id: 1, name: "Mirror Booth", price: "8x8ft", image: Blue },
+    { id: 2, name: "Mirror Booth", price: "8x8ft", image: Golden1 },
+    { id: 3, name: "Mirror Booths", price: "8x8ft", image: Golden2 },
+    { id: 4, name: "Mirror Booths", price: "7x7ft", image: Golden },
     { id: 5, name: "Mirror Booths", price: "8x8ft", image: Golden4 },
-    { id: 6, name: "Mirror Booths", price: "8x8ft", image: Golden5 },
-    { id: 7, name: "Mirror Booths", price: "8x8ft", image: Rose },
-    { id: 8, name: "Mirror Booths", price: "8x8ft", image: Silver },
+    { id: 6, name: "Mirror Booths", price: "7x7ft", image: Golden5 },
+    { id: 7, name: "Mirror Booths", price: "7x7ft", image: Rose },
+    { id: 8, name: "Mirror Booths", price: "7x7ft", image: Silver },
     { id: 9, name: "Mirror Booths", price: "8x8ft", image: Symphony },
+    { id: 10, name: "Mirror Booths", price: "7x7ft", image: white },
+    { id: 11, name: "Mirror Booths", price: "7x7ft", image: snow },
+    { id: 12, name: "Mirror Booths", price: "7x7ft", image: Royal },
+    { id: 13, name: "Mirror Booths", price: "7x7ft", image: pink },
   ];
   return (
     <section className="mx-auto w-full">
@@ -39,7 +47,7 @@ const Backdrop = () => {
           </span>
         </p>
       </div>
-      <div className=" hidden md:flex md:w-[90%] gap-10 mx-auto">
+      {/* <div className=" hidden md:flex md:w-[90%] gap-10 mx-auto">
         <img
           src={packageImage}
           alt=""
@@ -57,11 +65,11 @@ const Backdrop = () => {
           </p>
           
         </div>
-      </div>
+      </div> */}
 
       <div className="my-10">
         <h1 className="text-center my-5 text-4xl md:text-6xl font-pinyon">
-          Explore Our Booths
+        Explore Our Backdrops
         </h1>
         <div className="grid px-2 md:px-0 grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {Backdrops.map((booth) => (
@@ -83,7 +91,7 @@ const Backdrop = () => {
                   className="btn block"
                   onClick={() => navigate("/enquire")}
                 >
-                  Enquire
+                  Book Now
                 </button>
               </div>
             </div>

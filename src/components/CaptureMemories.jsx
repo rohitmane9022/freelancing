@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router";
 import capture1 from "../Images/capture1.png";
 import capture2 from "../Images/capture2.png";
 
 const CaptureMemories = () => {
+  const navigate = useNavigate();
   return (
     <section className="captureMemories my-10">
       <div className="flex h-[500px] rounded-lg md:px-20 px-3 bg-bgSecond  items-center overflow-hidden">
@@ -22,7 +24,7 @@ const CaptureMemories = () => {
             intuitive touch-screen interface. More than just a photobooth, it’s
             a fun and memorable centerpiece for any occasion.
           </p>
-          <button className="text-textCol bg-bgPrimary hover:text-textCol hover:bg-bgSecond text-base px-8 rounded-sm py-2.5 border-2 mt-5 font-medium border-transparent hover:border-textCol duration-300">Learn More</button>
+          <button onClick={()=> navigate("/backdrop")} className="text-textCol bg-bgPrimary hover:text-textCol hover:bg-bgSecond text-base px-8 rounded-sm py-2.5 border-2 mt-5 font-medium border-transparent hover:border-textCol duration-300">Learn More</button>
         </div>
 
        

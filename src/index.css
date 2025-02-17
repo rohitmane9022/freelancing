@@ -70,7 +70,7 @@
     @apply bg-background text-foreground;
   }
   .btn{
-    @apply font-poppins text-white block md:hidden mx-auto bg-textCol2 hover:text-textCol2 hover:bg-white text-base px-8 rounded-sm py-2.5 border-2 mt-5 font-medium border-transparent hover:border-textCol duration-300
+    @apply font-poppins text-white block md:hidden mx-auto md:mx-0 bg-textCol2 hover:text-textCol2 hover:bg-white text-base px-8 rounded-sm py-2.5 border-2 mt-5 font-medium border-transparent hover:border-textCol duration-300
   }
 }
 

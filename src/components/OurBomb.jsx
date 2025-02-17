@@ -7,7 +7,7 @@ const OurBomb = () => {
       <div className="text-center md:text-start" >
         <h1 className="md:text-[55px] md:uppercase font-pinyon text-5xl md:font-rig-solid">Our Bomb Fotoroo</h1>
         <p className="border-b border-black md:w-[640px] my-4"/>
-        <div className="text-textCol lg:text-xl text-base font-playwrite font-medium">
+        <div className="text-textCol lg:text-xl text-base font-p  laywrite font-medium">
           
           <p className="my-4 ">
             At FotoRoo, we turn your celebrations into unforgettable

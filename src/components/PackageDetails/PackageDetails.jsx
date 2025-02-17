@@ -72,6 +72,28 @@ const items = [
           imageURL: packagedetail3
         }
       ]
+    },
+    {
+      id: 4,
+      name: "Magazine Booth",
+      price: "$300",
+      details: [
+        {
+          title: "Photo Booth Attendant",
+          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          imageURL: packagedetail1
+        },
+        {
+          title: "Unlimited 2x Photo Strips",
+          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          imageURL: packagedetail2
+        },
+        {
+          title: "Another Example Title",
+          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          imageURL: packagedetail3
+        }
+      ]
     }
   ];
 
