@@ -39,7 +39,7 @@ Snap, sign, and shine with custom overlays and instant prints. Step up, strike a
       <div className="flex lg:flex-row flex-col lg:justify-evenly lg:mt-10">
         <div className="md:h-[600px] object-contain overflow-hidden">
       <video 
-  src={ExploreBoots3} 
+  src="/video/ExploreBoots3.mp4"
   className="md:w-[456px] " 
   autoPlay 
   muted 
