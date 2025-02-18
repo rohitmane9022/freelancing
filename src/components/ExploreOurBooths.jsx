@@ -1,6 +1,10 @@
 import { useNavigate } from "react-router";
-import explore from "../Images/explore.png"
+// import explore from "../Images/explore.png"
 import ExploreBoots3 from "../Images/ExploreBoots3.mp4"
+import DSLR from "../Images/DSLR Booth/DSLR.png"
+import MirrorBooth1 from "../Images/Mirror Booth/MirrorBooth1.jpeg"
+import MagazineBooth1 from "../Images/Magazine Booth/MagazineBooth1.png"
+
 
 
 
@@ -15,7 +19,7 @@ const ExploreOurBooths = () => {
       </div>
       <div className="font-baskerville">
       <div className="flex lg:flex-row flex-col lg:justify-evenly">
-        <img src={explore} alt="explore image" className="md:w-[456px]" />
+        <img src={MirrorBooth1} alt="explore image" className="md:w-[456px]" />
         <div className="lg:w-[26rem] w-full mr-10">
             <h2 className="lg:pb-7 py-5 text-2xl">Mirror Boot</h2>
         <p className="text-lg ">
@@ -34,7 +38,7 @@ Snap, sign, and shine with custom overlays and instant prints. Step up, strike a
         </p>
         <button className="btn block"  onClick={() => navigate("/backdrop")}>Learn More</button>
         </div>
-        <img src={explore} alt="explore image" className="md:w-[456px]" />
+        <img src={DSLR} alt="explore image" className="md:w-[456px]" />
       </div>
       <div className="flex lg:flex-row flex-col lg:justify-evenly lg:mt-10">
         <div className="md:h-[600px] object-contain overflow-hidden">
@@ -66,7 +70,7 @@ Snap, sign, and shine with custom overlays and instant prints. Step up, strike a
        </p>
        <button className="btn block"  onClick={() => navigate("/backdrop")}>Learn More</button>
        </div>
-       <img src={explore} alt="explore image" className="md:w-[456px]" />
+       <img src={MagazineBooth1} alt="explore image" className="md:w-[456px]" />
      </div>
       </div>
       

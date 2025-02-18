@@ -1,8 +1,5 @@
 import { NavLink } from "react-router";
-import youtube from "../Images/youtube.png";
-import Pinterst from "../Images/Pinterst.png";
-import linkedin from "../Images/linkedin.png";
-import instagram from "../Images/instagram.png";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,30 +9,34 @@ const Footer = () => {
       </h1>
       <div className="flex justify-between lg:px-64 md:px-36 pl-5 flex-col md:flex-row text-white text-lg font-baskerville">
         <div className="py-5 md:py-0">
-          <p>johndoe@gmail.com</p>
-          <p>+12 345677889</p>
-          <p>Address, Address, 123456</p>
+          <p>info@fotoroo.com.au</p>
+          <p>0435 254 055</p>
+          <p>Marsden Park, Sydney</p>
         </div>
-        <div className=" flex flex-col uppercase py-5 md:py-0">
+        <div className="flex flex-col uppercase py-5 md:py-0">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/packages">Packages</NavLink>
           <NavLink to="/backdrop">Backdrop</NavLink>
-          <NavLink to="/aboutus">About US</NavLink>
+          <NavLink to="/aboutus">About Us</NavLink>
         </div>
         <div>
           <h2>FOLLOW ALONG</h2>
           <div className="flex gap-3 md:mt-4 py-5 md:py-0">
-            <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
-              <img src={Pinterst} className="size-8" alt="Pinterest icon" />
+            <a
+              href="https://www.instagram.com/foto.roo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-2xl hover:text-gray-400"
+            >
+              <FaInstagram />
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-              <img src={linkedin} className="size-8" alt="LinkedIn icon" />
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-              <img src={instagram} className="size-8" alt="Instagram icon" />
-            </a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-              <img src={youtube} className="size-8" alt="YouTube icon" />
+            <a
+              href="https://www.facebook.com/profile.php?id=61558145031701"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-2xl hover:text-gray-400"
+            >
+              <FaFacebookF />
             </a>
           </div>
         </div>
