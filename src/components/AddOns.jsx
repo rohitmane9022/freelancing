@@ -35,9 +35,9 @@ Features include customizable backdrops, props, and photo templates to match you
 
   return (
     <section className="w-full py-12 bg-muted/30">
-      <div className="container">
+      <div className="container mx-auto">
        
-        <div className="mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl">
+        <div className="mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 ">
           {addOns.map((booth) => (
            <Card key={booth.id} className="flex flex-col h-full overflow-hidden border-2">
            <div className="relative aspect-[4/3] overflow-hidden">

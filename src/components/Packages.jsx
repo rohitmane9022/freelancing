@@ -82,11 +82,11 @@ const Packages = () => {
         </div>
         
       </div>
-      <div className="container">
+      <div className="container mx-auto">
       <h1 className="text-center my-14 text-4xl md:text-6xl font-rig-solid">
         Explore Our Packages
       </h1>
-      <div className="mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl">
+      <div className="mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 ">
         {booths.map((booth) => (
           <Card key={booth.id} className="flex flex-col overflow-hidden border-2">
             <div className="relative aspect-[4/3] overflow-hidden">
