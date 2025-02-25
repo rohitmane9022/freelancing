@@ -3,20 +3,20 @@ import Sydney from "../Images/Sydney.png";
 import BluuMountains from "../Images/BluuMountains.png";
 import Wollongong from "../Images/Wollongong.png";
 
-const ScrollHeading = ({ children }) => {
-  const { scrollY } = useScroll();
-  const x = useTransform(scrollY, [400, 1000], [0, -window.innerWidth]); 
+// const ScrollHeading = ({ children }) => {
+//   const { scrollY } = useScroll();
+//   const x = useTransform(scrollY, [400, 1000], [0, -window.innerWidth]); 
   
 
-  return (
-    <motion.h1
-      style={{ x }}
-      className="font-pinyon text-4xl text-textCol lg:text-6xl"
-    >
-      {children}
-    </motion.h1>
-  );
-};
+//   return (
+//     <motion.h1
+//       style={{ x }}
+     
+//     >
+//       {children}
+//     </motion.h1>
+//   );
+// };
 
 const OurService = () => {
   const destinations = [
@@ -27,7 +27,7 @@ const OurService = () => {
 
   return (
     <section className="ourservice flex flex-col my-10 items-center w-full">
-      <ScrollHeading>Our Servicing Areas</ScrollHeading>
+      <h1  className="font-pinyon text-4xl text-textCol lg:text-6xl">Our Servicing Areas</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:px-24 w-full mt-10">
         {destinations.map((destination) => (
           <div

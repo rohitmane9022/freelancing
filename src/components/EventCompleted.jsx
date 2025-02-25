@@ -22,24 +22,17 @@ const EventCompleted = () => {
     Uttarakhandi
   ];
 
-  const sectionRef = React.useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"]
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], [0, -900]);
+  
 
   return (
-    <section ref={sectionRef} className="flex flex-col md:my-16 my-2 items-center">
+    <section className="flex flex-col md:my-16 my-2 items-center">
       <div className="overflow-hidden w-full">
-        <motion.h1 
+        <h1 
           className="md:font-pinyon font-rig-solid text-center text-4xl md:text-6xl"
-          style={{ x }}
-          transition={{ type: "spring", stiffness: 80 }}
+          
         >
           Events Completed
-        </motion.h1>
+        </h1>
       </div>
 
       <div className="relative lg:h-72 md:h-64 h-36 w-full overflow-hidden my-10">
