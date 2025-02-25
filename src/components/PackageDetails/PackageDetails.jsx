@@ -6,98 +6,335 @@ import packagedetail3 from "../../Images/packagedetail3.png";
 import { useEffect } from "react";
 
 
-const items = [
-    {
-      id: 1,
-      name: "DSLR",
-      price: "$200",
-      details: [
-        {
-          title: "Photo Booth Attendant",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail1
-        },
-        {
-          title: "Unlimited 2x Photo Strips",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail2
-        },
-        {
-          title: "Another Example Title",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail3
-        }
-      ]
-    },
-    {
-      id: 2,
-      name: "Mirror",
-      price: "$250",
-      details: [
-        {
-          title: "Photo Booth Attendant",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail1
-        },
-        {
-          title: "Unlimited 2x Photo Strips",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail2
-        },
-        {
-          title: "Another Example Title",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail3
-        }
-      ]
-    },
-    {
-      id: 3,
-      name: "360 Booth",
-      price: "$300",
-      details: [
-        {
-          title: "Photo Booth Attendant",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail1
-        },
-        {
-          title: "Unlimited 2x Photo Strips",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail2
-        },
-        {
-          title: "Another Example Title",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail3
-        }
-      ]
-    },
-    {
-      id: 4,
-      name: "Magazine Booth",
-      price: "$300",
-      details: [
-        {
-          title: "Photo Booth Attendant",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail1
-        },
-        {
-          title: "Unlimited 2x Photo Strips",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail2
-        },
-        {
-          title: "Another Example Title",
-          paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          imageURL: packagedetail3
-        }
-      ]
-    }
-  ];
+// const items = [
+//     {
+//       id: 1,
+//       name: "DSLR",
+//       price: "$200",
+//       details: [
+//         {
+//           title: "Photo Booth Attendant",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail1
+//         },
+//         {
+//           title: "Unlimited 2x Photo Strips",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail2
+//         },
+//         {
+//           title: "Another Example Title",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail3
+//         }
+//       ]
+//     },
+//     {
+//       id: 2,
+//       name: "Mirror",
+//       price: "$250",
+//       details: [
+//         {
+//           title: "Photo Booth Attendant",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail1
+//         },
+//         {
+//           title: "Unlimited 2x Photo Strips",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail2
+//         },
+//         {
+//           title: "Another Example Title",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail3
+//         }
+//       ]
+//     },
+//     {
+//       id: 3,
+//       name: "360 Booth",
+//       price: "$300",
+//       details: [
+//         {
+//           title: "Photo Booth Attendant",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail1
+//         },
+//         {
+//           title: "Unlimited 2x Photo Strips",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail2
+//         },
+//         {
+//           title: "Another Example Title",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail3
+//         }
+//       ]
+//     },
+//     {
+//       id: 4,
+//       name: "Magazine Booth",
+//       price: "$300",
+//       details: [
+//         {
+//           title: "Photo Booth Attendant",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail1
+//         },
+//         {
+//           title: "Unlimited 2x Photo Strips",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail2
+//         },
+//         {
+//           title: "Another Example Title",
+//           paragraph: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+//           imageURL: packagedetail3
+//         }
+//       ]
+//     }
+//   ];
 
  
+const items = [
+  {
+    id: 1,
+    name: "DSLR",
+    price: "$200",
+    details: [
+      {
+        title: "Photo Booth Attendant",
+        paragraph: "A dedicated professional to guide guests, operate the booth, and ensure a smooth and fun experience.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Unlimited 2x Photo Strips",
+        paragraph: "Classic and fun photo strips printed instantly, letting guests take home unlimited keepsakes.",
+        imageURL: packagedetail2
+      },
+      {
+        title: "High-Quality DSLR Camera",
+        paragraph: "Capturing every moment in stunning high resolution for crisp, vibrant photos.",
+        imageURL: packagedetail3
+      },
+      {
+        title: "Trendy Props",
+        paragraph: "A curated selection of stylish and playful props to add personality and creativity to every shot.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "GIF",
+        paragraph: "Turn still moments into fun, shareable animations that bring your memories to life.",
+        imageURL: packagedetail2
+      },
+      {
+        title: "Studio-Grade Lighting",
+        paragraph: "Flawless, well-lit photos with professional lighting that makes every guest look their best.",
+        imageURL: packagedetail3
+      },
+      {
+        title: "Customizable Backdrops",
+        paragraph: "A variety of elegant and themed backgrounds tailored to match your event’s aesthetic.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Personalized Print Designs",
+        paragraph: "Custom overlays and templates to match your event theme, branding, or personal style.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Secure Online Gallery",
+        paragraph: "A private digital album where guests can view, download, and share their photos easily.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Hassle-Free Delivery & Setup",
+        paragraph: "We handle everything from transport to assembly, ensuring a hassle-free, seamless experience for you.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Red Carpet and Bollards",
+        paragraph: "Elevate the experience with a VIP entrance, creating a glamorous touch for your event.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Airdrop",
+        paragraph: "Instant, wireless photo sharing for Apple users, making it easy to save and share moments.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "QR Code",
+        paragraph: "Quick and convenient access to event photos, allowing guests to download their pictures instantly.",
+        imageURL: packagedetail1
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: "Mirror",
+    price: "$200",
+    details: [
+      {
+        title: "Photo Booth Attendant",
+        paragraph: "A dedicated professional to guide guests, operate the booth, and ensure a smooth and fun experience.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Unlimited 2x Photo Strips",
+        paragraph: "Classic and fun photo strips printed instantly, letting guests take home unlimited keepsakes.",
+        imageURL: packagedetail2
+      },
+      {
+        title: "High-Quality DSLR Camera",
+        paragraph: "Capturing every moment in stunning high resolution for crisp, vibrant photos.",
+        imageURL: packagedetail3
+      },
+      {
+        title: "Trendy Props",
+        paragraph: "A curated selection of stylish and playful props to add personality and creativity to every shot.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "GIF",
+        paragraph: "Turn still moments into fun, shareable animations that bring your memories to life.",
+        imageURL: packagedetail2
+      },
+      {
+        title: "Studio-Grade Lighting",
+        paragraph: "Flawless, well-lit photos with professional lighting that makes every guest look their best.",
+        imageURL: packagedetail3
+      },
+      {
+        title: "Customizable Backdrops",
+        paragraph: "A variety of elegant and themed backgrounds tailored to match your event’s aesthetic.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Personalized Print Designs",
+        paragraph: "Custom overlays and templates to match your event theme, branding, or personal style.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Secure Online Gallery",
+        paragraph: "A private digital album where guests can view, download, and share their photos easily.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Hassle-Free Delivery & Setup",
+        paragraph: "We handle everything from transport to assembly, ensuring a hassle-free, seamless experience for you.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Red Carpet and Bollards",
+        paragraph: "Elevate the experience with a VIP entrance, creating a glamorous touch for your event.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Airdrop",
+        paragraph: "Instant, wireless photo sharing for Apple users, making it easy to save and share moments.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "QR Code",
+        paragraph: "Quick and convenient access to event photos, allowing guests to download their pictures instantly.",
+        imageURL: packagedetail1
+      }
+    ]
+  },
+  {
+    id: 4,
+    name: "Magazine",
+    price: "$250",
+    details: [
+      {
+        title: "Photo Booth Attendant",
+        paragraph: "A dedicated professional to guide guests, operate the booth, and ensure a smooth and fun experience.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Trendy Props",
+        paragraph: "A curated selection of stylish and playful props to add personality and creativity to every shot.",
+        imageURL: packagedetail2
+      },
+      {
+        title: "Studio-Grade Lighting",
+        paragraph: "Flawless, well-lit photos with professional lighting that makes every guest look their best.",
+        imageURL: packagedetail3
+      },
+      {
+        title: "Red Carpet and Bollards",
+        paragraph: "Elevate the experience with a VIP entrance, creating a glamorous touch for your event.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Hassle-Free Delivery & Setup",
+        paragraph: "We handle everything from transport to assembly, ensuring a hassle-free, seamless experience for you.",
+        imageURL: packagedetail2
+      },
+      {
+        title: "Secure Online Gallery",
+        paragraph: "A private digital album where guests can view, download, and share their photos easily.",
+        imageURL: packagedetail3
+      }
+    ]
+  },
+  {
+    id: 3,
+    name: "360",
+    price: "$300",
+    details: [
+      {
+        title: "Photo Booth Attendant",
+        paragraph: "A dedicated professional to guide guests, operate the booth, and ensure a smooth and fun experience.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Unlimited 360 Video Sessions",
+        paragraph: "Guests can step onto the platform and record unlimited dynamic slow-motion videos, capturing every angle.",
+        imageURL: packagedetail2
+      },
+      {
+        title: "Custom Overlays",
+        paragraph: "Personalized video overlays to match your event’s theme, branding, or unique style for a premium touch.",
+        imageURL: packagedetail3
+      },
+      {
+        title: "Colorful LED Tubes",
+        paragraph: "Vibrant LED lighting adds an exciting visual effect, creating a dynamic and immersive video experience.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Custom Background Music",
+        paragraph: "Enhance your 360 videos with personalized background music that matches the vibe of your event.",
+        imageURL: packagedetail2
+      },
+      {
+        title: "Red Carpet and Bollards",
+        paragraph: "Elevate the experience with a VIP entrance, creating a glamorous touch for your event.",
+        imageURL: packagedetail3
+      },
+      {
+        title: "Trendy Party Props",
+        paragraph: "Fun and stylish props to bring personality and creativity to every video.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Secure Online Gallery",
+        paragraph: "A private digital album where guests can access, download, and share their videos instantly.",
+        imageURL: packagedetail1
+      },
+      {
+        title: "Hassle-Free Delivery & Setup",
+        paragraph: "We handle everything from transport to assembly, ensuring a hassle-free, seamless experience for you.",
+        imageURL: packagedetail1
+      }
+    ]
+  }
+];
+
+
 
 
 const PackageDetails = () => {
