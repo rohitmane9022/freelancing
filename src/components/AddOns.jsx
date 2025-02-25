@@ -23,57 +23,33 @@ Step 1 – Pick up the phone. Step 2 – Leave your message after the beep. Step
       content: `Turn your special moments into a lasting keepsake with the FotoRoo Keepsake Album. It's the perfect way to collect all the photos taken in the booth, along with heartfelt messages from your guests. After your event, you'll have a beautifully crafted album to look back on and cherish for years to come.`,
       image: Audio, 
     },
-    {
-      title: "Photo Booth",
-      description: "Capture the Fun, Frame the Memories",
-      content: `Elevate your event with our state-of-the-art photo booth. Perfect for weddings, parties, and corporate events, our booth combines cutting-edge technology with timeless fun. Guests can strike a pose, add digital props, and instantly print high-quality photos to take home.
-
-Features include customizable backdrops, props, and photo templates to match your event theme. Share your photos instantly on social media or via email. With our user-friendly interface, creating lasting memories has never been easier or more enjoyable.`,
-      image: Audio, 
-    },
   ]
 
   return (
     <section className="w-full py-12 bg-muted/30">
       <div className="container mx-auto">
-       
-        <div className="mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 ">
-          {addOns.map((booth) => (
-           <Card key={booth.id} className="flex flex-col h-full overflow-hidden border-2">
-           <div className="relative aspect-[4/3] overflow-hidden">
-             <img
-               src={booth.image || "/placeholder.svg"}
-               alt={booth.name}
-               className="object-cover h-full w-full transition-transform duration-300 hover:scale-105"
-             />
-           </div>
-           <CardHeader className="flex flex-col items-start">
-             <CardTitle className="text-xl font-bold mb-2">{booth.title}</CardTitle>
-             <p className="text-sm text-muted-foreground italic mb-2">{booth.description}</p>
-             <p className="text-base font-semibold">{booth.price}</p>
-           </CardHeader>
-           <CardContent className="flex-grow flex flex-col">
-             <div className="prose max-w-none text-sm mb-4">
-               {booth.content.split("\n\n").map((paragraph, index) => (
-                 <p key={index} className="mb-2">
-                   {paragraph}
-                 </p>
-               ))}
-             </div>
-             {/* Position the button at the bottom */}
-             <button
-               className="btn mt-auto block w-full"
-               onClick={() => handleLearnMore(booth.id)}
-             >
-               Learn More
-             </button>
-           </CardContent>
-         </Card>
-         
+        <div className="mx-auto">
+          {addOns.map((booth, index) => (
+            <div
+              key={booth.title}
+              className={`flex my-5 flex-col-reverse sm:px-24 md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+            >
+              <div className="md:w-2/5 mx-auto text-center md:text-start my-9 md:my-0">
+                <h2 className="text-xl my-4 md:text-4xl font-rig-solid">{booth.title}</h2>
+                <p className="font-courgette font-semibold md:text-lg leading-5 text-textCol md:w-4/5 mb-4">
+                  {booth.description}
+                </p>
+                <p className="font-courgette font-medium md:text-lg leading-5 text-textCol md:w-4/5">
+                  {booth.content}
+                </p>
+              </div>
+              <div className="md:w-2/4">
+                <img src={booth.image} alt={booth.title} className="w-full object-cover" />
+              </div>
+            </div>
           ))}
         </div>
       </div>
     </section>
   )
 }
-

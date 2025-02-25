@@ -1,4 +1,4 @@
-import  medium2 from "../Images/medium2.png";
+import Package from "../Images/Package.png";
 import packageImage from "../Images/packageImage.png";
 import explorepackage from "../Images/explorepackage.png";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +11,8 @@ const booths = [
     id: 1,
     name: "DSLR Booth",
     price: "$200",
-    description: "Perfect for capturing high-quality, professional-grade photos.",
+    description:
+      "Perfect for capturing high-quality, professional-grade photos.",
     content: `Experience the best in DSLR technology, ensuring your moments are captured with stunning clarity. This booth is equipped with advanced lenses and lighting to give your photos a studio-quality feel. Ideal for weddings, corporate events, and parties that demand perfection.`,
     image: explorepackage,
   },
@@ -44,17 +45,12 @@ const booths = [
       "LED Lighting",
       "Bollards and Red Carpet",
       "Delivery and Setup",
-      "Online Gallery"
-    ]
+      "Online Gallery",
+    ],
   },
 ];
 
-
-
-
 const Packages = () => {
-  
- 
   const navigate = useNavigate();
 
   const [selectedBooth, setSelectedBooth] = useState(null);
@@ -64,81 +60,114 @@ const Packages = () => {
   };
   return (
     <section className="mx-auto w-full">
-      <div className="relative"> 
+      <div className="relative">
         <img
-          src={medium2}
+          src={Package}
           className="md:w-[1500px] rounded-lg   my-5 md:h-[400px]  flex justify-center overflow-hidden z-0"
           alt="Home Image"
         />
         <p className="absolute inset-0 flex items-center md:text-8xl font-baskerville font- md:font-pinyon justify-center  text-white text-3xl ">
-          Our <span className="font-baskerville uppercase md:pl-3 pl-1 md:text-7xl">Packages</span>
+          Our{" "}
+          <span className="font-baskerville uppercase md:pl-3 pl-1 md:text-7xl">
+            Packages
+          </span>
         </p>
       </div>
       <div className="flex md:w-[90%] gap-10 mx-auto">
-        <img src={packageImage} alt="" className="hidden md:block md:w-auto w-10 " />
+        <img
+          src={packageImage}
+          alt=""
+          className="hidden md:block md:w-auto w-10 "
+        />
         <div className="flex-col px-7 md:w-auto py-5 rounded-xl lg:text-lg text-white font-baskerville bg-bgSecond">
-        <p>Transform your special moments into timeless treasures with FotoRoo’s premium photo booth packages. Enjoy unlimited photos and videos throughout your event, with seamless setup and pack-down handled by our dedicated team. From elegant backdrops to trendy props, we bring everything you need to create stunning, high-quality images that your guests will cherish forever. Our state-of-the-art booths, including DSLR, Mirror, and 360 options, are fully customizable to match your event’s theme, ensuring a truly personalized experience. Serving Sydney, Blue Mountains, and Wollongong, FotoRoo takes pride in delivering a seamless, stress-free service that makes your event unforgettable. See why we’re the trusted choice for weddings, parties, and corporate events.</p>
-        <p className="mt-2">*We offer free of charge travel within Sydney. Bookings outside Sydney will incur a travel charge*</p>
+          <p>
+            Capture timeless moments with FotoRoo’s premium photo booth
+            packages, including our unique Magazine Booth. Enjoy unlimited
+            photos and videos, seamless setup, and customizable booths (DSLR,
+            Mirror, 360, and Magazine) tailored to your event theme.
+          </p>
+          <p className="mt-2">
+          Serving Sydney, Blue Mountains, and Wollongong. 
+          </p>
+          <p className="mt-2">
+          Free travel within Sydney; additional charges apply outside.
+          </p>
         </div>
-        
       </div>
       <div className="container mx-auto">
-      <h1 className="text-center my-14 text-4xl md:text-6xl font-rig-solid">
-        Explore Our Packages
-      </h1>
-      <div className="mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 ">
-        {booths.map((booth) => (
-          <Card key={booth.id} className="flex flex-col overflow-hidden border-2">
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <img
-                src={booth.image || "/placeholder.svg"}
-                alt={booth.name}
-                className="object-cover h-full w-full transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <CardHeader className="flex flex-col items-start">
-              <CardTitle className="text-xl font-bold mb-2">{booth.name}</CardTitle>
-              <p className="text-sm text-muted-foreground italic mb-2">{booth.description}</p>
-              <p className="text-base font-semibold">{booth.price}</p>
-            </CardHeader>
-            {/* Ensure CardContent fills the remaining space */}
-            <CardContent className="flex-grow flex flex-col justify-between">
-              <div className="prose max-w-none text-sm mb-4">
-                {booth.content.split("\n\n").map((paragraph, index) => (
-                  <p key={index} className="mb-2">{paragraph}</p>
-                ))}
+        <h1 className="text-center my-14 text-4xl md:text-6xl font-rig-solid">
+          Explore Our Packages
+        </h1>
+        <div className="mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl">
+          {booths.map((booth) => (
+            <Card
+              key={booth.id}
+              className="flex flex-col overflow-hidden border-2"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={booth.image || "/placeholder.svg"}
+                  alt={booth.name}
+                  className="object-cover h-full w-full transition-transform duration-300 hover:scale-105"
+                />
               </div>
-              {booth.inclusions && booth.id === 4 && (
-                <div>
-                  <button
-                    className="text-blue-600 mt-2"
-                    onClick={() => setSelectedBooth(selectedBooth === booth.id ? null : booth.id)}
-                  >
-                    {selectedBooth === booth.id ? "Hide Inclusions" : "Show Inclusions"}
-                  </button>
-                  {selectedBooth === booth.id && (
-                    <ul className="list-disc pl-5 mt-2 text-sm">
-                      {booth.inclusions.map((inclusion, index) => (
-                        <li key={index}>{inclusion}</li>
-                      ))}
-                    </ul>
-                  )}
+              <CardHeader className="flex flex-col items-start">
+                <CardTitle className="text-xl font-bold mb-2">
+                  {booth.name}
+                </CardTitle>
+                <p className="text-sm text-muted-foreground italic mb-2">
+                  {booth.description}
+                </p>
+                <p className="text-base font-semibold">{booth.price}</p>
+              </CardHeader>
+              {/* Ensure CardContent fills the remaining space */}
+              <CardContent className="flex-grow flex flex-col justify-between">
+                <div className="prose max-w-none text-sm mb-4">
+                  {booth.content.split("\n\n").map((paragraph, index) => (
+                    <p key={index} className="mb-2">
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
-              )}
-              {/* Button is pushed to the bottom */}
-              <button
-                className="btn block w-full mt-auto"
-                onClick={() => handleLearnMore(booth.id)}
-              >
-                Learn More
-              </button>
-            </CardContent>
-          </Card>
-        ))}
+                {booth.inclusions && booth.id === 4 && (
+                  <div>
+                    <button
+                      className="text-blue-600 mt-2"
+                      onClick={() =>
+                        setSelectedBooth(
+                          selectedBooth === booth.id ? null : booth.id
+                        )
+                      }
+                    >
+                      {selectedBooth === booth.id
+                        ? "Hide Inclusions"
+                        : "Show Inclusions"}
+                    </button>
+                    {selectedBooth === booth.id && (
+                      <ul className="list-disc pl-5 mt-2 text-sm">
+                        {booth.inclusions.map((inclusion, index) => (
+                          <li key={index}>{inclusion}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
+                {/* Button is pushed to the bottom */}
+                <button
+                  className="btn block w-full mt-auto"
+                  onClick={() => handleLearnMore(booth.id)}
+                >
+                  Learn More
+                </button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
-    </div>
 
-      <h2 className="text-4xl md:text-6xl font-pinyon text-center mb-8">Add Ons</h2>
+      <h2 className="text-4xl md:text-6xl font-pinyon text-center mb-8">
+        Add Ons
+      </h2>
       <div className="grid ">
         {/* i remove this */}
         {/* {addons.map((addon) => ( 
@@ -165,11 +194,9 @@ const Packages = () => {
             </div>
           </div>
         ))} */}
-        
-        <AddOns/>
+
+        <AddOns />
       </div>
-  
-      
     </section>
   );
 };

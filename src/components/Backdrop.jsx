@@ -1,4 +1,4 @@
-import  Medium1 from "../Images/Medium1.png";
+import  backdrops from "../Images/backdrops.png";
 // import packageImage from "../Images/packageImage.png";
 import Blue from "../Images/backdrops/Blue.png";
 import Golden1 from "../Images/backdrops/Golden1.png";
@@ -20,10 +20,10 @@ const Backdrop = () => {
   const Backdrops = [
     { id: 1, name: "Blue Garden", price: "8x8ft", image: Blue },
     { id: 2, name: "Golden Confetti", price: "8x8ft", image: Golden1 },
-    { id: 3, name: "Golden Foliage", price: "7x7ft", image: Golden2 },
-    { id: 4, name: "Golden Geometry", price: "8x8ft", image: Golden },
-    { id: 5, name: "Golden Glamour", price: "7x7ft", image: Golden4 },
-    { id: 6, name: "Golden Sparkle", price: "8x8ft", image: Golden5 },
+    { id: 3, name: "Golden Geometry", price: "8x8ft", image: Golden2 },
+    { id: 4, name: "Golden Glamour", price: "7x7ft", image: Golden },
+    { id: 5, name: "Golden Sparkle", price: "8x8ft", image: Golden4 },
+    { id: 6, name: "Golden Foliage", price: "8x8ft", image: Golden5 },
     { id: 7, name: "Rose Garden", price: "7x7ft", image: Rose },
     { id: 8, name: "Silver Sparkle", price: "7x7ft", image: Silver },
     { id: 9, name: "Symphony", price: "8x8ft", image: Symphony },
@@ -37,7 +37,7 @@ const Backdrop = () => {
     <section className="mx-auto w-full">
       <div className="relative">
         <img
-          src={Medium1}
+          src={backdrops}
           className="md:w-[1500px] opacity-100 rounded-lg  hover:scale-110 transition-transform duration-300  my-5 md:h-[400px]  flex justify-center  z-0"
           alt="Home Image"
         />
